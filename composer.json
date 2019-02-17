@@ -1,0 +1,21 @@
+{
+    "name": "hempflower/payment-sdk-php",
+    "description": "WECHAT + ALIPAY + QPAY",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hempflower",
+            "email": "1993996310@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+		"php" : ">=5.6"
+	},
+	"autoload": {
+        "psr-4": {
+            "Sheep\\payment\\" : "Sheep/payment"
+        }
+    }
+}
