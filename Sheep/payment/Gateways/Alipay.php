@@ -59,7 +59,7 @@ abstract class Alipay extends GatewayInterface
         }
         // 沙箱模式
         if (!empty($config['debug'])) {
-            $this->gateway = 'https://openapi.alipaydev.com/gateway.do?charset=utf-8';
+            $this->baseUri = 'https://openapi.alipaydev.com/gateway.do?charset=utf-8';
         }
         $this->payload = [
             'app_id'      => $this->config->get('app_id'),
