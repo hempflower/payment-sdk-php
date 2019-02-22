@@ -167,7 +167,7 @@ abstract class Wechat extends GatewayInterface
     {
         $result = $this->fromXml(
             $this->post($this->baseUrl . $url, $this->toXml($this->payload),
-                $cert ? ['ssl_cer' => $this->config->get('ssl_cer', ''), 'ssl_key' => $this->config->get('ssl_key', '')]: '')
+                $cert ? ['ssl_cer' => $this->config->get('ssl_cer', ''), 'ssl_key' => $this->config->get('ssl_key', '')]: [])
         );
         if (!isset($result['return_code']) || $result['return_code'] !== 'SUCCESS' || $result['result_code'] !== 'SUCCESS') {
             $error = 'ResultError:' . $result['return_msg'];
